@@ -4,6 +4,7 @@ const https = require("https");
 const mongoose = require("mongoose");
 const ejs = require("ejs");
 const moment = require("moment");
+const tz = require("moment-timezone");
 
 mongoose.connect("mongodb+srv://ishita-admin:rajitritu321@cluster0.aahcc.mongodb.net/utilityOneDB");
 
@@ -167,7 +168,6 @@ app.get("/platforms/:id", (req, res) => {
   platforms.forEach((el) => {
     if (id == el.code) {
       name = el.name;
-      console.log(name);
     }
   });
   res.redirect("/type");
@@ -213,7 +213,6 @@ app.post("/type", (req, res) => {
       today +
       "&order_by=start&username=ishitac2604&api_key=5e1257432d47a7c6d6e2798d33f6c6cc2e2d102e";
 
-    console.log(url);
     https.get(url, (response) => {
       response.on("data", (data) => {
         d = JSON.parse(data);
@@ -266,5 +265,4 @@ if (port == null || port == "") {
 }
 
 app.listen(port, function() {
-  console.log("Server started succesfully");
 });
