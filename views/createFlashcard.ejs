@@ -1,0 +1,20 @@
+<%- include('partials/header') -%>
+<section id="create-flashcard">
+  <div class="create-flashcard">
+    <h4>Create Flashcard</h4>
+    <form class="" action="/createFlashcard/<%= colID %>" method="post">
+      <div class="form-group">
+        <label for="question">Question</label><br>
+        <input type="text" class="form-control" id="question" name="question" autocomplete="off">
+        <label for="answert">Answer</label>
+        <textarea name="answer" id="answer" class="form-control" rows="5" cols="30"></textarea>
+      </div>
+      <div class="button">
+        <button type="Submit" id="answer">Create</button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<%- include('partials/footer') -%>

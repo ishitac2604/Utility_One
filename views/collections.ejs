@@ -1,0 +1,39 @@
+<%- include('partials/header.ejs') -%>
+<section id="collection">
+  <h1>Collections</h1>
+
+  <div class="container d-flex justify-content-center">
+    <ul class="list-group mt-5">
+      <!-- Adding a list -->
+      <li class="list-group-item add-lists d-flex justify-content-between align-content-center">
+        <form class="new-list" action="/collections" method="post">
+          <input type="text" name="collectionName" placeholder="Add Collection" autocomplete="off"></input>
+          <button type="submit" name="add"><i class="fas fa-plus"></i></button>
+        </form>
+      </li>
+
+        <% collections.forEach(function(c){ %>
+        <li class="list-group-item lists d-flex justify-content-between align-content-center">
+            <div class="d-flex flex-row">
+              <i class="far fa-folder-open fa-2x mt-1"></i>
+              <h6 class="mt-2 ms-3">
+                <a href="/collections/<%= c._id %>">
+                  <%= c.name %>
+                </a>
+              </h6>
+            </div>
+            <div class="bin mt-1">
+              <form class="delete" action="/collections/delete" method="post">
+                <button type="submit" name="delete" value=<%= c._id %>><i class="fas fa-trash"></i></button>
+              </form>
+
+            </div>
+        </li>
+        <% }) %>
+
+    </ul>
+</div>
+
+
+</section>
+<%- include('partials/footer.ejs') -%>

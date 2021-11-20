@@ -1,0 +1,32 @@
+<%- include('partials/header') -%>
+<section id="liveFuture">
+  <div class="flex-container">
+    <div class="flex-child c1">
+      <form class="" action="/type" method="post">
+        <button
+          type="submit"
+          class="btn btn-outline-light btn-lg"
+          name="type"
+          value="1"
+        >
+          Live Contests
+        </button>
+      </form>
+    </div>
+
+    <div class="flex-child c2">
+      <form class="" action="/type" method="post">
+        <button
+          type="submit"
+          class="btn btn-outline-dark btn-lg"
+          name="type"
+          value="0"
+        >
+          Future Contests
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') -%>

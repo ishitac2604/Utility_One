@@ -1,0 +1,52 @@
+<%- include('partials/header') -%>
+<section id="flashcards">
+  <div class="d-flex justify-content-between">
+    <h1>Flashcards</h1>
+      <button type="button" class="btn btn-outline-secondary" name="colID"><h4><a href="/createFlashcard/<%= colID %>">Create</a></h4></button>
+  </div>
+
+  <section class="carousel">
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner " align="center"">
+
+    <div class="carousel-item active">
+
+          <div class="sample">
+            <p>
+              FlashCards
+            </p>
+          </div>
+
+    </div>
+    <% flashcards.forEach(function(f){ %>
+
+      <div class="carousel-item">
+
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front artist-1">
+                <p>
+                <%= f.question %>
+                </p>
+            </div>
+            <div class="back">
+              <p><%= f.answer %> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+  </div>
+  <button class="carousel-control-prev controls" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon controls"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  </section>
+</section>
+<%- include('partials/footer') -%>

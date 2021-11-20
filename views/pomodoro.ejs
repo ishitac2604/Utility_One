@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+<div class="pomodoro-page">
+  <div class="progress" style="height: 0.8rem;">
+  <div class="progress-bar bg-info" role="progressbar" style="width: 0%;"></div>
+
+  </div>
+    <div class="container main-pomo">
+
+      <div class="container role">
+         <span class="col-md-4">
+            <button type="button" class="btn button-role active" data-role="pomodoro">Pomodoro</button>
+         </span>
+         <span class="col-md-4">
+            <button type="button" class="btn button-role" data-role="shortBreak">Short Break</button>
+         </span>
+         <span class="col-md-4">
+            <button type="button" class=" btn button-role" data-role="longBreak">Long Break</button>
+         </span>
+      </div>
+
+      <div class="timer">
+        <h1 class="minute">25</h1>
+        <h1 class="colon">:</h1>
+        <h1 class="seconds">00</h1>
+      </div>
+
+        <div class="row control">
+          <button type="button" class="btn button start">Start</button>
+        </div>
+      </div>
+    </div>
+
+<%- include('partials/footer'); -%>
