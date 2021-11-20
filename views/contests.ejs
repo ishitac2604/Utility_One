@@ -10,14 +10,14 @@
           <h3><%= c.event %></h3>
           <p>
             <span style="font-weight: bold">Start Date</span>: <%=
-            moment(c.start).format('MMMM Do YYYY') %><br />
+            moment(c.start).local().format('MMMM Do YYYY') %><br />
             <span style="font-weight: bold">End Date</span>: <%=
-            moment(c.end).format('MMMM Do YYYY') %><br />
+            moment(c.end).local().format('MMMM Do YYYY') %><br />
             <span style="font-weight: bold">Start Time</span>: <%=
-            moment(c.start).format('h:mm:ss a') %><br />
+            moment(c.start).local().format('h:mm:ss a') %><br />
 
             <span style="font-weight: bold">End Time</span>: <%=
-            moment(c.end).format('h:mm:ss a') %><br />
+            moment(c.end).local().format('h:mm:ss a') %><br />
             <span style="font-weight: bold">Countdown</span>: <%=
             moment(c.start).startOf(c.start).fromNow() %><br />
           </p>
