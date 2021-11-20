@@ -4,10 +4,13 @@
   "description": "Utility-One: All in one productivity website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"r
   },
   "author": "Ishita Chandra",
   "license": "ISC",
+  "engines": {
+    "node": "14.17.5"
+  }
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.1.6",
