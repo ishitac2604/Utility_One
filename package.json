@@ -4,7 +4,7 @@
   "description": "Utility-One: All in one productivity website",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"r
+    "start": "node app.js"
   },
   "author": "Ishita Chandra",
   "license": "ISC",
